@@ -42,8 +42,8 @@
 
     <script>
         document.getElementById('scriptButton').addEventListener('click', function() {
-            // Adiciona "/script" à URL
-            window.location.href = window.location.href + "script";
+            // Adiciona "/script" à URL sem mudar o título da página
+            history.pushState(null, '', window.location.pathname + 'script');
         });
 
         function changeBackgroundColor() {
