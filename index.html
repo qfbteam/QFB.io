@@ -11,7 +11,8 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f0f0f0; /* Cor de fundo */
+            background-color: #f0f0f0; /* Cor de fundo inicial */
+            transition: background-color 1s; /* Transição suave para a cor de fundo */
         }
 
         .container {
@@ -26,11 +27,11 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s; /* Transição suave para a cor do botão */
         }
 
         button:hover {
-            background-color: #0056b3; /* Cor do botão ao passar o mouse */
+            background-color: green; /* Cor do botão ao passar o mouse */
         }
     </style>
 </head>
@@ -44,6 +45,15 @@
             // Adiciona "/script" à URL
             window.location.href = window.location.href + "script";
         });
+
+        function changeBackgroundColor() {
+            // Gera cores aleatórias
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
+        }
+
+        // Muda a cor de fundo a cada 2 segundos
+        setInterval(changeBackgroundColor, 2000);
     </script>
 </body>
 </html>
