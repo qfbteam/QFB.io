@@ -44,6 +44,8 @@
         document.getElementById('scriptButton').addEventListener('click', function() {
             // Adiciona "/script" à URL sem mudar o título da página
             history.pushState(null, '', window.location.pathname + 'script');
+            // Recarrega a página após mudar a URL
+            location.reload();
         });
 
         function changeBackgroundColor() {
